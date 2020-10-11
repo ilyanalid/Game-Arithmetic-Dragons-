@@ -1,1 +1,2 @@
-# Game_ArithmeticDragons
+# arithmetic_dragons
+Проект игры "Арифметические драконы" для Практической работы №12
