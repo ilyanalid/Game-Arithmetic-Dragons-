@@ -3,6 +3,7 @@
 from enemies import *
 from hero import *
 
+
 def annoying_input_int(message =''):
     answer = None
     while answer == None:
@@ -22,11 +23,14 @@ def game_tournament(hero, dragon_list):
 
             if dragon.check_answer(answer):
                 hero.attack(dragon)
-                print('Верно! \n** дракон кричит от боли **')
+                hero._experience += 10
+                print('Верно! \n** дракон кричит от боли:** \n+10 ')
             else:
                 dragon.attack(hero)
-                print('Ошибка! \n** вам нанесён удар... **')
+                hero._experience -= 15
+                print('Ошибка! \n** вам нанесён удар:** \n-15 ')
         if dragon.is_alive():
+
             break
         print('Дракон', dragon._color, 'повержен!\n')
 
